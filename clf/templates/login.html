@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+<style>
+   div {margin-top: 30px;}
+   p {margin-top: 30;
+  color: aqua;}
+</style>
+
+<form action="/login/" method="POST">
+    {% csrf_token %}
+   {% if error %}
+   <p>{{ error }}</p>
+    {% endif %}
+    <input type="text" name="username" placeholder="username" />
+    <input type="password" name="password" />
+    <button type="submit">login</button>
+</form>
+<div><p>{{result}}</p></div>
+</body>

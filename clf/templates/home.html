@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+    body {background-image: url('C:\\Users\\morhaf\\djangoProjects\\API\\clf\\templates\\iris.jpg');
+      background-size: cover;;}
+    form {column-rule-color: blue;}
+    h1 {text-align: center;
+      color: red;}
+    table {border-collapse: collapse;}
+    td, th {border-color: orange;}
+    div {text-align: center;}
+
+    </style>
+    <title> Predict Iris Flower Species </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+    
+    <body>
+    
+        <form action="/predict" method="GET" name="GET">
+            <input type="text" id="v1" name="v1">
+            <input type="text" id="v2" name="v2">
+            <input type="text" id="v3" name="v3">
+            <input type="text" id="v4" name="v4">
+            <div id="2">
+            <input type="radio" id="lodistic" name="type" value="logistic">
+            <label for="logistic">logistic</label>
+            <br>
+            <input type="radio" id="svm" name="type" value="svm">
+            <label for="svm">svm</label>
+        </div>
+            <div id="1">
+            <button type="submit"  > Predict </button>
+            </div>
+        </form>
+        <form action="/get_clf_info" method="GET">
+          <button type="submit">get the classifier info</button>
+        </form>
+        <form action="login_page" ><button type="submit">login</button></a>
+{% block data %}    
+
+{% endblock %}
+{% block info %}
+
+{% endblock %}
